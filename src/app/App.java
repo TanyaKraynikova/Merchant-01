@@ -15,4 +15,14 @@ public class App {
     public static void main(String[] args) {
 
     }
+    // Инициализация переменных.
+    // Имитация ввода данных пользователем.
+    private static void initVars() {
+        merchantName = "Роберт";
+        email = "bob@mail.com";
+        phone = "055 123-4567";
+        productName = "апельсины";
+        quantity = 1000;
+        price = 19.99;
+    }
 }
