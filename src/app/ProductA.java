@@ -1,7 +1,8 @@
 package app;
 
 // Класс наследует класс-модель,
-public class ProductA extends Product {
+// и реализует интерфейс базового функционала Товара.
+public class ProductA extends Product implements Sales{
 
     int qnty;
     double price;
@@ -12,4 +13,10 @@ public class ProductA extends Product {
         this.qnty = qnty;
         this.price = price;
     }
+    // Метод этого класса переопределяющий метод интерфейса
+    @Override
+    public double calcSales(int quota, double price) {
+        return quota * price;
+    }
 }
+
