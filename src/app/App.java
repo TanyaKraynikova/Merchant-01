@@ -12,6 +12,7 @@ public class App {
     static String productName;
     static int quantity;
     static double price;
+    static String roundBonus;
     static ProductA product;
     static MerchantA merchantA;
     static String infoMerchant;
@@ -52,6 +53,8 @@ public class App {
         infoMerchant = merchantA.infoMerchant();
         product = new ProductA(productName, quantity, price);
         infoProduct = product.infoProduct();
-        return null;
+        double sales = product.calcSales(quantity, price);
+        roundBonus = Rounder.roundValue(merchantA.calcBonus(sales));
+        return infoMerchant + infoProduct + "\nБонус (грн.): " + roundBonus;
     }
 }
