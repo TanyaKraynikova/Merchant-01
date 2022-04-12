@@ -19,7 +19,7 @@ public class ProductA extends Product implements Sales{
         String resultSale = Rounder.roundValue(calcSales(qnty, price));
         return "Товар: " + name + "\nОбъем продаж (грн.): " + resultSale;
     }
-    
+
     // Метод этого класса переопределяющий метод интерфейса
     @Override
     public double calcSales(int quota, double price) {
