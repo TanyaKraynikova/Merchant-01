@@ -19,8 +19,10 @@ public class App {
     static String infoProduct;
 
 
+    // Делаем метод main() наименее загруженным логикой
     public static void main(String[] args) {
-
+        initVars();
+        showData(processData());
     }
     // Инициализация переменных.
     // Имитация ввода данных пользователем.
@@ -56,5 +58,9 @@ public class App {
         double sales = product.calcSales(quantity, price);
         roundBonus = Rounder.roundValue(merchantA.calcBonus(sales));
         return infoMerchant + infoProduct + "\nБонус (грн.): " + roundBonus;
+    }
+    // Вывод данных
+    private static void showData(String output) {
+        System.out.println(output);
     }
 }
