@@ -12,6 +12,8 @@ public class App {
     static String productName;
     static int quantity;
     static double price;
+    static ProductA product;
+    static MerchantA merchantA;
     static String infoMerchant;
     static String infoProduct;
 
@@ -40,5 +42,16 @@ public class App {
 
         System.out.println("Enter product price:");
         price  = scanner.nextDouble();
+    }
+
+    // Передача данных на обработку.
+    // Вызовы методов через экземпляры классов
+    // для получения результатов расчетов.
+    private static String processData() {
+        merchantA = new MerchantA(merchantName, phone, email);
+        infoMerchant = merchantA.infoMerchant();
+        product = new ProductA(productName, quantity, price);
+        infoProduct = product.infoProduct();
+        return null;
     }
 }
