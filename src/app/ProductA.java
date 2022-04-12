@@ -13,6 +13,13 @@ public class ProductA extends Product implements Sales{
         this.qnty = qnty;
         this.price = price;
     }
+    // Метод этого класса
+    public String infoProduct() {
+        String name = getName();
+        String resultSale = Rounder.roundValue(calcSales(qnty, price));
+        return "Товар: " + name + "\nОбъем продаж (грн.): " + resultSale;
+    }
+    
     // Метод этого класса переопределяющий метод интерфейса
     @Override
     public double calcSales(int quota, double price) {
