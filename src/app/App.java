@@ -10,6 +10,8 @@ public class App {
     static String productName;
     static int quantity;
     static double price;
+    static String infoMerchant;
+    static String infoProduct;
 
 
     public static void main(String[] args) {
